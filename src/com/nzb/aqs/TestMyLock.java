@@ -10,7 +10,8 @@ import java.util.concurrent.locks.Lock;
  */
 public class TestMyLock {
     public void test() {
-        final Lock lock = new TwoThreadsLock();
+//        final Lock lock = new TwoThreadsLock();
+        final Lock lock = new TwoLock();
         class Worker extends Thread {
             public void run() {
                 while (true) {

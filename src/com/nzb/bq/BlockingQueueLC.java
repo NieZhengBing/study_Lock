@@ -1,6 +1,7 @@
 package com.nzb.bq;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -11,7 +12,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * @create 2018/2/13
  */
 public class BlockingQueueLC<T> {
-    private List queue = new ArrayList<>();
+//    private List queue = new ArrayList<>();
+    private List queue = new LinkedList<>();
     private final int limit;
     Lock lock = new ReentrantLock();
     private Condition needNotEmpty = lock.newCondition();

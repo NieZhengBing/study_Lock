@@ -49,7 +49,7 @@ public class BqTest {
                 Thread.sleep(1000);
                 System.out.println(Thread.currentThread().getName() + " will pop......");
                 Integer i = bq.dequeue();
-                System.out.println(" i = " +  i.intValue());
+                System.out.println(" i = " +  i.intValue() + " already pop");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

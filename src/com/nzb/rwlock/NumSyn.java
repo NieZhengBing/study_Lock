@@ -7,6 +7,10 @@ public class NumSyn implements IGoodsNum{
 
     private GoodsVo goods;
 
+    public NumSyn(GoodsVo goods) {
+        this.goods = goods;
+    }
+
     @Override
     public synchronized GoodsVo getGoodsNumber() {
         try {

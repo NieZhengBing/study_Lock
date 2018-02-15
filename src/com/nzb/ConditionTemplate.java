@@ -13,6 +13,7 @@ public class ConditionTemplate {
     Condition condition = lock.newCondition();
 
     public void waitc() throws InterruptedException {
+        lock.lock();
         try {
             condition.await();
         } finally {
